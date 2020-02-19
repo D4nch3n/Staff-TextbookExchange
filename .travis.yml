@@ -1,0 +1,14 @@
+language: python
+python:
+- '3.8'
+install:
+- pip install -r requirements-travis.txt
+script:
+- python manage.py test
+deploy:
+  provider: heroku
+  api_key:
+    secure: llaJ9w6CwMgJhrF2WRok5gPB3VtR4uGplrp9sxvnA1FflLiP2NzoPU5YbdmFdcgnFVPzaVSFpZtThu3g1Cqt8JgBR2MiXcfaFxyiks3wJdkYcb8/C+uCxgFre0Xg+pZPFlr5y9zOsuHHTdEfh/Sbyiigwuq68Pwf6qzO7mDcRlvqB7ye88LjwDtVJsks4x2t4H28KE5gREh5q2g2yXaPY5cPzIolJk2J3IaTw8DysxLk3H3skE2qNh6fqvm2p7pWVCnwkw0U2kkt4tv2erocvIa9ojFzxMmw2sWzKofNfu+XHWPxtIYpyHCgQAjwr0zConJbKJd129cUj9CJxMx9aLpPOyQe3s/sWkO3M7SAHRBjOeGLglRC/9KI907vgSdvgm2kItR7hEHzH37UXt9QteelGBjcWmHtlHXRP1C03NMjqFPfScx4/CgOFpyUUi4XWbYttXRUrAphhh2KLb1em2BR0GleefoywhQS6xqYx2buorto3dhqvvgog0eJQ61Li6Mq6x+HEDdjuhpjOOcjnGBglSFkuO7bncXl1JRKFOKbFzxZSJqyt5kwtsA9RyVdOdCEiabBALV+gD+mR7hL7xzAkt/TUeQM42UTGaXudcAh+wkGEyLi7zqCdPLEDL1CIbOFOFtLQDW0wcdGdcso2MiPy79Vi3HnnSs2AKZB9Sg=
+  app: staff-textbookexchange-s20
+  on:
+    repo: uva-cs3240-s20/Staff-TextbookExchange
